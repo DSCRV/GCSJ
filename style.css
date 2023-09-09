@@ -1,0 +1,77 @@
+* {
+    font-family: 'Google Sans', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    font-family: 'Google Sans', sans-serif;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-family: 'Google Sans', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.green-tick {
+    color: green;
+}
+
+.red-cross {
+    color: red;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex; /* Use flexbox to center-align the search box */
+    justify-content: center; /* Center-align horizontally */
+    align-items: center; /* Center-align vertically */
+    position: relative;
+    width: 40%; /* Set the width to 50% */
+    margin: 0 auto; /* Center-align the entire search bar */
+    background-color: transparent; /* Remove background color */
+    border: 1px solid gray; /* Add a black outline */
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    width: 100%; /* Full width input within the search box */
+    font-size: 16px;
+    color: #333;
+}
+
+/* Placeholder text color */
+.search-bar input::placeholder {
+    color: black;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+.logo img {
+    height: 75px; /* Adjust the height to make the logo smaller */
+    margin-right: 20px;
+}
