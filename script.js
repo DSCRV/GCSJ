@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // Calculate rank based on the number of courses completed
                     leaderboardData.push({
-                        rank: parseInt(coursesCompleted),
+                        rank: parseInt(coursesCompleted) + parseInt(skillBadges) + parseInt(genAIGames),
                         name,
                         coursesCompleted: parseInt(coursesCompleted),
                         skillBadges: parseInt(skillBadges),
