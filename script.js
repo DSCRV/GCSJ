@@ -70,10 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     row.innerHTML = `
                         <td><img src="badge.png" width=20px></td>
                         <td>${data.name}</td>
+                        <td>${data.redemptionStatus}</td>
                         <td>${data.coursesCompleted}</td>
                         <td>${data.skillBadges}</td>
                         <td>${data.genAIGames}</td>
-                        <td>${data.redemptionStatus}</td>
+                        
                     `;
                     tableBody.appendChild(row);
                     }
@@ -82,10 +83,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         row.innerHTML = `
                             <td>${index + 1}</td>
                             <td>${data.name}</td>
+                            <td>${data.redemptionStatus}</td>
                             <td>${data.coursesCompleted}</td>
                             <td>${data.skillBadges}</td>
                             <td>${data.genAIGames}</td>
-                            <td>${data.redemptionStatus}</td>
+                            
                         `;
                         tableBody.appendChild(row);
                     }
