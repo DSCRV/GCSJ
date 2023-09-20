@@ -41,10 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 row.innerHTML = `
                     <td>${index + 1}</td>
                     <td>${data.name}</td>
+                    <td>${data.redemptionStatus}</td>
                     <td>${data.coursesCompleted}</td>
                     <td>${data.skillBadges}</td>
                     <td>${data.genAIGames}</td>
-                    <td>${data.redemptionStatus}</td>
+                    
                 `;
                 tableBody.appendChild(row);
             });
@@ -64,17 +65,30 @@ document.addEventListener('DOMContentLoaded', function () {
             function renderTable(data) {
                 tableBody.innerHTML = '';
                 data.forEach((data, index) => {
+                    if (data.coursesCompleted + data.skillBadges + data.genAIGames == 9){
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                        <td>${index + 1}</td>
+                        <td><img src="badge.png" width=20px></td>
                         <td>${data.name}</td>
-                        <td>${data.redemptionStatus}</td>
                         <td>${data.coursesCompleted}</td>
                         <td>${data.skillBadges}</td>
                         <td>${data.genAIGames}</td>
-                        
+                        <td>${data.redemptionStatus}</td>
                     `;
                     tableBody.appendChild(row);
+                    }
+                    else {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td>${data.name}</td>
+                            <td>${data.coursesCompleted}</td>
+                            <td>${data.skillBadges}</td>
+                            <td>${data.genAIGames}</td>
+                            <td>${data.redemptionStatus}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    }
                 });
             }
         })
